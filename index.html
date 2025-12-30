@@ -4,82 +4,151 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Portal Técnico Tramontina</title>
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
-  <header class="header">
-    <img class="logo" src="assets/logo-tramontina.png" alt="Tramontina" />
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="logo" src="assets/logo-tramontina.png" alt="Tramontina" />
+      <h1>Portal Técnico – Tramontina Profissional</h1>
+      <p>Boletins • Catálogos • Limpeza • Manutenção</p>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="wrap">
+
+    <!-- MENU -->
     <section id="menu" class="screen active">
-      <button class="btn" data-go="contatos">Contatos</button>
-      <button class="btn" data-go="boletins">Boletins de mão de obra</button>
-      <button class="btn" data-go="catalogo">Catálogo de produtos</button>
-      <button class="btn" data-go="limpeza">Material de limpeza e utilização</button>
-      <button class="btn btn-lock" data-go="manutencao">Vídeos técnicos de manutenção (Autorizados)</button>
+      <div class="grid">
+        <article class="card">
+          <h2>Contatos</h2>
+          <p>Canais de atendimento e suporte técnico.</p>
+          <button class="btn primary" data-go="contatos">Acessar</button>
+        </article>
+
+        <article class="card">
+          <h2>Boletins de mão de obra</h2>
+          <p>Arquivos em PDF para consulta rápida.</p>
+          <button class="btn primary" data-go="boletins">Acessar</button>
+        </article>
+
+        <article class="card">
+          <h2>Catálogo de produtos</h2>
+          <p>Catálogo em PDF.</p>
+          <button class="btn primary" data-go="catalogo">Acessar</button>
+        </article>
+
+        <article class="card">
+          <h2>Limpeza e utilização</h2>
+          <p>Vídeos técnicos (YouTube).</p>
+          <button class="btn primary" data-go="limpeza">Acessar</button>
+        </article>
+
+        <article class="card">
+          <h2>Manutenção (Autorizados)</h2>
+          <p>Vídeos técnicos de manutenção.</p>
+          <button class="btn danger" data-go="manutencao">Acessar</button>
+        </article>
+      </div>
     </section>
 
+    <!-- CONTATOS -->
     <section id="contatos" class="screen">
-      <h2>Contatos</h2>
-      <a class="link" href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/" target="_blank" rel="noreferrer">
-        Abrir página de contatos
-      </a>
-      <button class="btn btn-back" data-back>Voltar</button>
+      <div class="toolbar">
+        <button class="btn ghost" data-back>← Voltar</button>
+      </div>
+      <div class="card">
+        <h2>Contatos</h2>
+        <p>Abre a página já existente.</p>
+        <a class="btn primary" href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/" target="_blank" rel="noreferrer">
+          Abrir contatos Tramontina
+        </a>
+      </div>
     </section>
 
+    <!-- BOLETINS -->
     <section id="boletins" class="screen">
-      <h2>Boletins de mão de obra</h2>
-      <a class="link" href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank" rel="noreferrer">Cozinhas profissionais (PDF)</a>
-      <a class="link" href="pdf/boletim-fornos-rational.pdf" target="_blank" rel="noreferrer">Fornos Rational (PDF)</a>
-      <button class="btn btn-back" data-back>Voltar</button>
+      <div class="toolbar">
+        <button class="btn ghost" data-back>← Voltar</button>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h2>Cozinhas profissionais</h2>
+          <p>Boletim de mão de obra (PDF)</p>
+          <a class="btn primary" href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
+        </article>
+
+        <article class="card">
+          <h2>Fornos Rational</h2>
+          <p>Boletim de mão de obra (PDF)</p>
+          <a class="btn primary" href="pdf/boletim-fornos-rational.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
+        </article>
+      </div>
     </section>
 
+    <!-- CATALOGO -->
     <section id="catalogo" class="screen">
-      <h2>Catálogo de produtos</h2>
-      <a class="link" href="pdf/catalogo-produtos.pdf" target="_blank" rel="noreferrer">Abrir catálogo (PDF)</a>
-      <button class="btn btn-back" data-back>Voltar</button>
+      <div class="toolbar">
+        <button class="btn ghost" data-back>← Voltar</button>
+      </div>
+
+      <div class="card">
+        <h2>Catálogo de produtos</h2>
+        <p>PDF para consulta.</p>
+        <a class="btn primary" href="pdf/catalogo-produtos.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
+      </div>
     </section>
 
+    <!-- LIMPEZA -->
     <section id="limpeza" class="screen">
-      <h2>Material de limpeza e utilização</h2>
-
-      <div class="group">
-        <div class="tag tag-red">Linha Europa</div>
-        <a class="link" href="https://www.youtube.com/watch?v=GdR_g1C6QRQ" target="_blank" rel="noreferrer">Utilização e Limpeza Banho Maria</a>
-        <a class="link" href="https://youtu.be/DiqutDQ6BDI" target="_blank" rel="noreferrer">Utilização e Limpeza Chapa Cromada</a>
-        <a class="link" href="https://youtu.be/vbZnJNG4CsU" target="_blank" rel="noreferrer">Utilização e Limpeza Chapa de Ferro</a>
+      <div class="toolbar">
+        <button class="btn ghost" data-back>← Voltar</button>
       </div>
 
-      <div class="group">
-        <div class="tag tag-blue">Linha América</div>
-        <a class="link" href="https://www.youtube.com/watch?v=9j0oj0zutR0" target="_blank" rel="noreferrer">Apresentação</a>
-        <a class="link" href="https://www.youtube.com/watch?v=KvNtNA75h8w" target="_blank" rel="noreferrer">Apresentação Broiler</a>
-      </div>
+      <div class="grid">
+        <article class="card">
+          <h2>Linha Europa</h2>
+          <p>Utilização e limpeza</p>
+          <a class="btn danger" href="https://www.youtube.com/watch?v=GdR_g1C6QRQ" target="_blank" rel="noreferrer">
+            Abrir vídeos
+          </a>
+        </article>
 
-      <button class="btn btn-back" data-back>Voltar</button>
+        <article class="card">
+          <h2>Linha América</h2>
+          <p>Utilização e limpeza</p>
+          <a class="btn primary" href="https://www.youtube.com/watch?v=9j0oj0zutR0" target="_blank" rel="noreferrer">
+            Abrir vídeos
+          </a>
+        </article>
+      </div>
     </section>
 
+    <!-- MANUTENCAO -->
     <section id="manutencao" class="screen">
-      <h2>Manutenção (Autorizados)</h2>
-      <p class="note">Área exclusiva. (Se quiser, eu coloco senha depois.)</p>
-
-      <div class="group">
-        <div class="tag tag-red">Linha Europa</div>
-        <a class="link" href="https://www.youtube.com/watch?v=vzmtNESyezE" target="_blank" rel="noreferrer">Técnico Fogão a Gás</a>
-        <a class="link" href="https://www.youtube.com/watch?v=3OAsU5o4aQA" target="_blank" rel="noreferrer">Técnico Fritadeira Elétrica</a>
+      <div class="toolbar">
+        <button class="btn ghost" data-back>← Voltar</button>
       </div>
 
-      <div class="group">
-        <div class="tag tag-blue">Linha América</div>
-        <a class="link" href="https://www.youtube.com/watch?v=2z3SMHY_ZCs" target="_blank" rel="noreferrer">Instalação e Manutenção Fogão a Gás</a>
-        <a class="link" href="https://www.youtube.com/watch?v=4TBwOydk5Hc" target="_blank" rel="noreferrer">Instalação e Manutenção Forno a Gás</a>
-      </div>
+      <div class="grid">
+        <article class="card">
+          <h2>Europa – Manutenção</h2>
+          <p>Conteúdo exclusivo autorizados</p>
+          <a class="btn danger" href="https://www.youtube.com/watch?v=vzmtNESyezE" target="_blank" rel="noreferrer">Abrir</a>
+        </article>
 
-      <button class="btn btn-back" data-back>Voltar</button>
+        <article class="card">
+          <h2>América – Manutenção</h2>
+          <p>Conteúdo exclusivo autorizados</p>
+          <a class="btn primary" href="https://www.youtube.com/watch?v=2z3SMHY_ZCs" target="_blank" rel="noreferrer">Abrir</a>
+        </article>
+      </div>
     </section>
+
   </main>
 
-  <script src="app.js?v=1"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
