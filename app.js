@@ -1,37 +1,46 @@
+document.addEventListener("DOMContentLoaded", () => {
+  inserirLogo();
+});
+
+function inserirLogo() {
+  const topo = document.getElementById("topo");
+  if (!topo) return;
+
+  const logo = document.createElement("img");
+  logo.src = "ativos/logo-tramontina.png";
+  logo.alt = "Tramontina";
+  logo.className = "logo";
+
+  topo.prepend(logo);
+}
+
 function abrirTela(id) {
-  document.querySelectorAll('.screen').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  carregarConteudo(id);
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+
+  if (id === "limpeza" || id === "manutencao") {
+    carregarVideos(id);
+  }
+
   window.scrollTo(0, 0);
 }
 
 function voltarMenu() {
-  abrirTela('menu');
+  abrirTela("menu");
 }
 
-function carregarConteudo(id) {
-  const area = document.querySelector(`#${id} .conteudo`);
-  if (!area || !dados[id]) return;
+function carregarVideos(tipo) {
+  const area = document.querySelector(`#${tipo} .conteudo`);
+  if (!area || !videos[tipo]) return;
 
   area.innerHTML = "";
 
-  const info = dados[id];
-
-  if (Array.isArray(info)) {
-    info.forEach(item => {
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.target = "_blank";
-      a.className = "btn primary";
-      a.textContent = item.titulo;
-      area.appendChild(a);
-    });
-  } else {
+  videos[tipo].forEach(v => {
     const a = document.createElement("a");
-    a.href = info.link;
+    a.href = v.link;
     a.target = "_blank";
     a.className = "btn primary";
-    a.textContent = "Abrir";
+    a.textContent = v.titulo;
     area.appendChild(a);
-  }
+  });
 }
