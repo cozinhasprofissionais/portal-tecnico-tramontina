@@ -1,154 +1,148 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portal Técnico Tramontina</title>
-  <link rel="stylesheet" href="styles.css?v=3" />
+
+  <!-- CSS ÚNICO (estilos.css) -->
+  <link rel="stylesheet" href="estilos.css?v=3">
 </head>
+
 <body>
 
+  <!-- TOPO / HERO -->
   <header class="hero">
     <div class="hero-inner">
-      <img class="logo" src="assets/logo-tramontina.png" alt="Tramontina" />
-      <h1>Portal Técnico – Tramontina Profissional</h1>
-      <p>Boletins • Catálogos • Limpeza • Manutenção</p>
+      <img src="ativos/logo-tramontina.png" alt="Tramontina" class="logo">
+      <h1>Portal Técnico Tramontina</h1>
+      <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
     </div>
   </header>
 
-  <main class="wrap">
+  <div class="wrap">
 
-    <!-- MENU -->
+    <!-- MENU PRINCIPAL -->
     <section id="menu" class="screen active">
       <div class="grid">
-        <article class="card">
+
+        <div class="card">
           <h2>Contatos</h2>
-          <p>Canais de atendimento e suporte técnico.</p>
-          <button class="btn primary" data-go="contatos">Acessar</button>
-        </article>
+          <p>Canais oficiais de atendimento Tramontina Profissional.</p>
+          <button class="btn primary" onclick="abrir('contatos')">Acessar</button>
+        </div>
 
-        <article class="card">
-          <h2>Boletins de mão de obra</h2>
-          <p>Arquivos em PDF para consulta rápida.</p>
-          <button class="btn primary" data-go="boletins">Acessar</button>
-        </article>
+        <div class="card">
+          <h2>Boletins Técnicos</h2>
+          <p>Boletins de mão de obra e documentos técnicos.</p>
+          <button class="btn primary" onclick="abrir('boletins')">Acessar</button>
+        </div>
 
-        <article class="card">
-          <h2>Catálogo de produtos</h2>
-          <p>Catálogo em PDF.</p>
-          <button class="btn primary" data-go="catalogo">Acessar</button>
-        </article>
+        <div class="card">
+          <h2>Catálogo de Produtos</h2>
+          <p>Catálogos oficiais Tramontina.</p>
+          <button class="btn primary" onclick="abrir('catalogo')">Acessar</button>
+        </div>
 
-        <article class="card">
-          <h2>Limpeza e utilização</h2>
-          <p>Vídeos técnicos (YouTube).</p>
-          <button class="btn primary" data-go="limpeza">Acessar</button>
-        </article>
+        <div class="card">
+          <h2>Limpeza e Utilização</h2>
+          <p>Vídeos de limpeza e uso correto.</p>
+          <button class="btn primary" onclick="abrir('limpeza')">Acessar</button>
+        </div>
 
-        <article class="card">
-          <h2>Manutenção (Autorizados)</h2>
+        <div class="card">
+          <h2>Manutenção</h2>
           <p>Vídeos técnicos de manutenção.</p>
-          <button class="btn danger" data-go="manutencao">Acessar</button>
-        </article>
+          <button class="btn primary" onclick="abrir('manutencao')">Acessar</button>
+        </div>
+
       </div>
     </section>
 
     <!-- CONTATOS -->
     <section id="contatos" class="screen">
-      <div class="toolbar">
-        <button class="btn ghost" data-back>← Voltar</button>
-      </div>
       <div class="card">
-        <h2>Contatos</h2>
-        <p>Abre a página já existente.</p>
-        <a class="btn primary" href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/" target="_blank" rel="noreferrer">
-          Abrir contatos Tramontina
+        <h2>Contatos Tramontina</h2>
+        <p>Abrir página de canais de atendimento.</p>
+        <a class="btn primary" target="_blank"
+           href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/">
+          Abrir contatos
         </a>
+        <br><br>
+        <button class="btn ghost" onclick="voltar()">Voltar</button>
       </div>
     </section>
 
     <!-- BOLETINS -->
     <section id="boletins" class="screen">
-      <div class="toolbar">
-        <button class="btn ghost" data-back>← Voltar</button>
-      </div>
+      <div class="card">
+        <h2>Boletins Técnicos</h2>
 
-      <div class="grid">
-        <article class="card">
-          <h2>Cozinhas profissionais</h2>
-          <p>Boletim de mão de obra (PDF)</p>
-          <a class="btn primary" href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
-        </article>
-
-        <article class="card">
-          <h2>Fornos Rational</h2>
-          <p>Boletim de mão de obra (PDF)</p>
-          <a class="btn primary" href="pdf/boletim-fornos-rational.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
-        </article>
+        <a class="btn primary" target="_blank" href="pdf/boletim-cozinhas-profissionais.pdf">
+          Cozinhas Profissionais (PDF)
+        </a>
+        <br><br>
+        <a class="btn primary" target="_blank" href="pdf/boletim-fornos-rational.pdf">
+          Fornos Rational (PDF)
+        </a>
+        <br><br>
+        <button class="btn ghost" onclick="voltar()">Voltar</button>
       </div>
     </section>
 
-    <!-- CATALOGO -->
+    <!-- CATÁLOGO -->
     <section id="catalogo" class="screen">
-      <div class="toolbar">
-        <button class="btn ghost" data-back>← Voltar</button>
-      </div>
-
       <div class="card">
-        <h2>Catálogo de produtos</h2>
-        <p>PDF para consulta.</p>
-        <a class="btn primary" href="pdf/catalogo-produtos.pdf" target="_blank" rel="noreferrer">Abrir PDF</a>
+        <h2>Catálogo de Produtos</h2>
+        <a class="btn primary" target="_blank" href="pdf/catalogo-produtos.pdf">
+          Abrir catálogo (PDF)
+        </a>
+        <br><br>
+        <button class="btn ghost" onclick="voltar()">Voltar</button>
       </div>
     </section>
 
     <!-- LIMPEZA -->
     <section id="limpeza" class="screen">
-      <div class="toolbar">
-        <button class="btn ghost" data-back>← Voltar</button>
-      </div>
+      <div class="card">
+        <h2>Limpeza e Utilização</h2>
 
-      <div class="grid">
-        <article class="card">
-          <h2>Linha Europa</h2>
-          <p>Utilização e limpeza</p>
-          <a class="btn danger" href="https://www.youtube.com/watch?v=GdR_g1C6QRQ" target="_blank" rel="noreferrer">
-            Abrir vídeos
-          </a>
-        </article>
-
-        <article class="card">
-          <h2>Linha América</h2>
-          <p>Utilização e limpeza</p>
-          <a class="btn primary" href="https://www.youtube.com/watch?v=9j0oj0zutR0" target="_blank" rel="noreferrer">
-            Abrir vídeos
-          </a>
-        </article>
+        <a class="btn primary" target="_blank"
+           href="https://www.youtube.com/watch?v=GdR_g1C6QRQ">
+          Linha Europa
+        </a>
+        <br><br>
+        <a class="btn primary" target="_blank"
+           href="https://www.youtube.com/watch?v=9j0oj0zutR0">
+          Linha América
+        </a>
+        <br><br>
+        <button class="btn ghost" onclick="voltar()">Voltar</button>
       </div>
     </section>
 
-    <!-- MANUTENCAO -->
+    <!-- MANUTENÇÃO -->
     <section id="manutencao" class="screen">
-      <div class="toolbar">
-        <button class="btn ghost" data-back>← Voltar</button>
-      </div>
+      <div class="card">
+        <h2>Manutenção</h2>
 
-      <div class="grid">
-        <article class="card">
-          <h2>Europa – Manutenção</h2>
-          <p>Conteúdo exclusivo autorizados</p>
-          <a class="btn danger" href="https://www.youtube.com/watch?v=vzmtNESyezE" target="_blank" rel="noreferrer">Abrir</a>
-        </article>
-
-        <article class="card">
-          <h2>América – Manutenção</h2>
-          <p>Conteúdo exclusivo autorizados</p>
-          <a class="btn primary" href="https://www.youtube.com/watch?v=2z3SMHY_ZCs" target="_blank" rel="noreferrer">Abrir</a>
-        </article>
+        <a class="btn danger" target="_blank"
+           href="https://www.youtube.com/watch?v=vzmtNESyezE">
+          Linha Europa
+        </a>
+        <br><br>
+        <a class="btn primary" target="_blank"
+           href="https://www.youtube.com/watch?v=2z3SMHY_ZCs">
+          Linha América
+        </a>
+        <br><br>
+        <button class="btn ghost" onclick="voltar()">Voltar</button>
       </div>
     </section>
 
-  </main>
+  </div>
 
-  <script src="app.js?v=3"></script>
+  <!-- JS -->
+  <script src="app.js"></script>
 </body>
 </html>
