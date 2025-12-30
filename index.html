@@ -1,75 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Técnico Tramontina</title>
 
-  <!-- CSS ÚNICO (estilos.css) -->
-  <link rel="stylesheet" href="estilos.css?v=3">
+  <!-- CSS (nome confirmado: estilos.css) -->
+  <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-  <!-- TOPO / HERO -->
+  <!-- TOPO -->
   <header class="hero">
-    <div class="hero-inner">
-      <img src="ativos/logo-tramontina.png" alt="Tramontina" class="logo">
-      <h1>Portal Técnico Tramontina</h1>
-      <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
-    </div>
+    <img src="ativos/logo-tramontina.png" alt="Tramontina" class="logo">
+    <h1>Portal Técnico Tramontina</h1>
+    <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
   </header>
 
-  <div class="wrap">
+  <!-- CONTAINER -->
+  <main class="container">
 
     <!-- MENU PRINCIPAL -->
     <section id="menu" class="screen active">
-      <div class="grid">
 
-        <div class="card">
-          <h2>Contatos</h2>
-          <p>Canais oficiais de atendimento Tramontina Profissional.</p>
-          <button class="btn primary" onclick="abrir('contatos')">Acessar</button>
-        </div>
-
-        <div class="card">
-          <h2>Boletins Técnicos</h2>
-          <p>Boletins de mão de obra e documentos técnicos.</p>
-          <button class="btn primary" onclick="abrir('boletins')">Acessar</button>
-        </div>
-
-        <div class="card">
-          <h2>Catálogo de Produtos</h2>
-          <p>Catálogos oficiais Tramontina.</p>
-          <button class="btn primary" onclick="abrir('catalogo')">Acessar</button>
-        </div>
-
-        <div class="card">
-          <h2>Limpeza e Utilização</h2>
-          <p>Vídeos de limpeza e uso correto.</p>
-          <button class="btn primary" onclick="abrir('limpeza')">Acessar</button>
-        </div>
-
-        <div class="card">
-          <h2>Manutenção</h2>
-          <p>Vídeos técnicos de manutenção.</p>
-          <button class="btn primary" onclick="abrir('manutencao')">Acessar</button>
-        </div>
-
+      <div class="card">
+        <h2>Contatos</h2>
+        <p>Canais oficiais de atendimento Tramontina Profissional.</p>
+        <button onclick="abrir('contatos')">Acessar</button>
       </div>
+
+      <div class="card">
+        <h2>Boletins Técnicos</h2>
+        <p>Boletins de mão de obra e documentos técnicos.</p>
+        <button onclick="abrir('boletins')">Acessar</button>
+      </div>
+
+      <div class="card">
+        <h2>Catálogo de Produtos</h2>
+        <p>Catálogos oficiais Tramontina.</p>
+        <button onclick="abrir('catalogo')">Acessar</button>
+      </div>
+
+      <div class="card">
+        <h2>Limpeza e Utilização</h2>
+        <p>Vídeos de limpeza e uso correto.</p>
+        <button onclick="abrir('limpeza')">Acessar</button>
+      </div>
+
+      <div class="card">
+        <h2>Manutenção</h2>
+        <p>Vídeos técnicos de manutenção.</p>
+        <button onclick="abrir('manutencao')">Acessar</button>
+      </div>
+
     </section>
 
     <!-- CONTATOS -->
     <section id="contatos" class="screen">
       <div class="card">
         <h2>Contatos Tramontina</h2>
-        <p>Abrir página de canais de atendimento.</p>
-        <a class="btn primary" target="_blank"
-           href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/">
+        <a href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/"
+           target="_blank">
           Abrir contatos
         </a>
         <br><br>
-        <button class="btn ghost" onclick="voltar()">Voltar</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
     </section>
 
@@ -78,15 +74,15 @@
       <div class="card">
         <h2>Boletins Técnicos</h2>
 
-        <a class="btn primary" target="_blank" href="pdf/boletim-cozinhas-profissionais.pdf">
+        <a href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank">
           Cozinhas Profissionais (PDF)
         </a>
         <br><br>
-        <a class="btn primary" target="_blank" href="pdf/boletim-fornos-rational.pdf">
+        <a href="pdf/boletim-fornos-rational.pdf" target="_blank">
           Fornos Rational (PDF)
         </a>
         <br><br>
-        <button class="btn ghost" onclick="voltar()">Voltar</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
     </section>
 
@@ -94,11 +90,11 @@
     <section id="catalogo" class="screen">
       <div class="card">
         <h2>Catálogo de Produtos</h2>
-        <a class="btn primary" target="_blank" href="pdf/catalogo-produtos.pdf">
+        <a href="pdf/catalogo-produtos.pdf" target="_blank">
           Abrir catálogo (PDF)
         </a>
         <br><br>
-        <button class="btn ghost" onclick="voltar()">Voltar</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
     </section>
 
@@ -107,17 +103,15 @@
       <div class="card">
         <h2>Limpeza e Utilização</h2>
 
-        <a class="btn primary" target="_blank"
-           href="https://www.youtube.com/watch?v=GdR_g1C6QRQ">
+        <a href="https://www.youtube.com/watch?v=GdR_g1C6QRQ" target="_blank">
           Linha Europa
         </a>
         <br><br>
-        <a class="btn primary" target="_blank"
-           href="https://www.youtube.com/watch?v=9j0oj0zutR0">
+        <a href="https://www.youtube.com/watch?v=9j0oj0zutR0" target="_blank">
           Linha América
         </a>
         <br><br>
-        <button class="btn ghost" onclick="voltar()">Voltar</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
     </section>
 
@@ -126,23 +120,22 @@
       <div class="card">
         <h2>Manutenção</h2>
 
-        <a class="btn danger" target="_blank"
-           href="https://www.youtube.com/watch?v=vzmtNESyezE">
+        <a href="https://www.youtube.com/watch?v=vzmtNESyezE" target="_blank">
           Linha Europa
         </a>
         <br><br>
-        <a class="btn primary" target="_blank"
-           href="https://www.youtube.com/watch?v=2z3SMHY_ZCs">
+        <a href="https://www.youtube.com/watch?v=2z3SMHY_ZCs" target="_blank">
           Linha América
         </a>
         <br><br>
-        <button class="btn ghost" onclick="voltar()">Voltar</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
     </section>
 
-  </div>
+  </main>
 
   <!-- JS -->
   <script src="app.js"></script>
+
 </body>
 </html>
