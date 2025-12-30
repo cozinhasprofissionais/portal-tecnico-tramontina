@@ -1,125 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portal Técnico Tramontina</title>
-  <link rel="stylesheet" href="estilos.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 
 <body>
 
-<header class="hero" id="topo">
-  <h1>Portal Técnico Tramontina</h1>
-  <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
-</header>
+  <!-- TOPO / LOGO -->
+  <header class="topo">
+    <img src="ativos/logo-tramontina.png" alt="Tramontina">
+    <h1>Portal Técnico Tramontina</h1>
+    <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
+  </header>
 
-<main class="container">
+  <!-- CONTEÚDO -->
+  <main class="container">
 
-  <!-- MENU -->
-  <section id="menu" class="screen active">
-    <div class="grid">
-
-      <div class="card">
-        <h2>Contatos</h2>
-        <button onclick="abrirTela('contatos')">Acessar</button>
-      </div>
-
-      <div class="card">
-        <h2>Boletins Técnicos</h2>
-        <button onclick="abrirTela('boletins')">Acessar</button>
-      </div>
-
-      <div class="card">
-        <h2>Catálogo de Produtos</h2>
-        <button onclick="abrirTela('catalogo')">Acessar</button>
-      </div>
-
-      <div class="card">
-        <h2>Limpeza e Utilização</h2>
-        <button onclick="abrirTela('limpeza')">Acessar</button>
-      </div>
-
-      <div class="card">
-        <h2>Manutenção</h2>
-        <button onclick="abrirTela('manutencao')">Acessar</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTATOS -->
-  <section id="contatos" class="screen">
-    <div class="card">
+    <!-- CONTATOS -->
+    <section class="card">
       <h2>Contatos</h2>
-      <a class="btn primary" target="_blank"
-         href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/">
-        Abrir contatos Tramontina
+      <p>Canais oficiais de atendimento Tramontina Profissional.</p>
+      <a class="botao" href="https://cozinhasprofissionais.github.io/canais-atendimento-tramontina/" target="_blank">
+        Acessar
       </a>
-      <br>
-      <button onclick="voltarMenu()">Voltar</button>
-    </div>
-  </section>
+    </section>
 
-  <!-- BOLETINS (PDF DIRETO) -->
-  <section id="boletins" class="screen">
-    <div class="card">
+    <!-- BOLETINS -->
+    <section class="card">
       <h2>Boletins Técnicos</h2>
-
-      <a class="btn primary" target="_blank"
-         href="pdf/boletim-cozinhas-profissionais.pdf">
-        Cozinhas Profissionais (PDF)
+      <p>Boletins de mão de obra e documentos técnicos.</p>
+      <a class="botao" href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank">
+        Cozinhas Profissionais
       </a>
-      <br><br>
-      <a class="btn primary" target="_blank"
-         href="pdf/boletim-fornos-rational.pdf">
-        Fornos Rational (PDF)
+      <a class="botao secundario" href="pdf/boletim-fornos-rational.pdf" target="_blank">
+        Fornos Rational
       </a>
+    </section>
 
-      <br><br>
-      <button onclick="voltarMenu()">Voltar</button>
-    </div>
-  </section>
-
-  <!-- CATALOGO (PDF DIRETO) -->
-  <section id="catalogo" class="screen">
-    <div class="card">
+    <!-- CATÁLOGO -->
+    <section class="card">
       <h2>Catálogo de Produtos</h2>
-
-      <a class="btn primary" target="_blank"
-         href="pdf/catalogo-produtos.pdf">
-        Abrir catálogo (PDF)
+      <p>Catálogos oficiais Tramontina.</p>
+      <a class="botao" href="pdf/catalogo-produtos.pdf" target="_blank">
+        Abrir Catálogo
       </a>
+    </section>
 
-      <br><br>
-      <button onclick="voltarMenu()">Voltar</button>
-    </div>
-  </section>
-
-  <!-- LIMPEZA (VÍDEOS VIA JS) -->
-  <section id="limpeza" class="screen">
-    <div class="card">
+    <!-- LIMPEZA -->
+    <section class="card">
       <h2>Limpeza e Utilização</h2>
-      <div class="conteudo"></div>
-      <br>
-      <button onclick="voltarMenu()">Voltar</button>
-    </div>
-  </section>
+      <p>Vídeos de limpeza e uso correto.</p>
+      <a class="botao vermelho" href="limpeza.html">
+        Linha Europa
+      </a>
+      <a class="botao azul" href="limpeza-america.html">
+        Linha América
+      </a>
+    </section>
 
-  <!-- MANUTENÇÃO (VÍDEOS VIA JS) -->
-  <section id="manutencao" class="screen">
-    <div class="card">
+    <!-- MANUTENÇÃO -->
+    <section class="card">
       <h2>Manutenção</h2>
-      <div class="conteudo"></div>
-      <br>
-      <button onclick="voltarMenu()">Voltar</button>
-    </div>
-  </section>
+      <p>Vídeos técnicos de manutenção (autorizados).</p>
+      <a class="botao vermelho" href="manutencao.html">
+        Linha Europa
+      </a>
+      <a class="botao azul" href="manutencao-america.html">
+        Linha América
+      </a>
+    </section>
 
-</main>
-
-<script src="videos.js"></script>
-<script src="app.js"></script>
+  </main>
 
 </body>
 </html>
