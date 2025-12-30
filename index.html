@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Técnico Tramontina</title>
 
-  <!-- CSS (nome confirmado: estilos.css) -->
-  <link rel="stylesheet" href="estilos.css">
+  <!-- CSS correto -->
+  <link rel="stylesheet" href="estilos.css?v=10">
 </head>
 
 <body>
@@ -18,40 +18,39 @@
     <p>Manuais • Catálogos • Boletins • Vídeos Técnicos</p>
   </header>
 
-  <!-- CONTAINER -->
   <main class="container">
 
-    <!-- MENU PRINCIPAL -->
+    <!-- MENU -->
     <section id="menu" class="screen active">
 
       <div class="card">
         <h2>Contatos</h2>
         <p>Canais oficiais de atendimento Tramontina Profissional.</p>
-        <button onclick="abrir('contatos')">Acessar</button>
+        <button onclick="abrirTela('contatos')">Acessar</button>
       </div>
 
       <div class="card">
         <h2>Boletins Técnicos</h2>
         <p>Boletins de mão de obra e documentos técnicos.</p>
-        <button onclick="abrir('boletins')">Acessar</button>
+        <button onclick="abrirTela('boletins')">Acessar</button>
       </div>
 
       <div class="card">
         <h2>Catálogo de Produtos</h2>
         <p>Catálogos oficiais Tramontina.</p>
-        <button onclick="abrir('catalogo')">Acessar</button>
+        <button onclick="abrirTela('catalogo')">Acessar</button>
       </div>
 
       <div class="card">
         <h2>Limpeza e Utilização</h2>
         <p>Vídeos de limpeza e uso correto.</p>
-        <button onclick="abrir('limpeza')">Acessar</button>
+        <button onclick="abrirTela('limpeza')">Acessar</button>
       </div>
 
       <div class="card">
         <h2>Manutenção</h2>
         <p>Vídeos técnicos de manutenção.</p>
-        <button onclick="abrir('manutencao')">Acessar</button>
+        <button onclick="abrirTela('manutencao')">Acessar</button>
       </div>
 
     </section>
@@ -65,7 +64,7 @@
           Abrir contatos
         </a>
         <br><br>
-        <button onclick="voltar()">Voltar</button>
+        <button onclick="voltarMenu()">Voltar</button>
       </div>
     </section>
 
@@ -73,7 +72,6 @@
     <section id="boletins" class="screen">
       <div class="card">
         <h2>Boletins Técnicos</h2>
-
         <a href="pdf/boletim-cozinhas-profissionais.pdf" target="_blank">
           Cozinhas Profissionais (PDF)
         </a>
@@ -82,7 +80,7 @@
           Fornos Rational (PDF)
         </a>
         <br><br>
-        <button onclick="voltar()">Voltar</button>
+        <button onclick="voltarMenu()">Voltar</button>
       </div>
     </section>
 
@@ -94,7 +92,7 @@
           Abrir catálogo (PDF)
         </a>
         <br><br>
-        <button onclick="voltar()">Voltar</button>
+        <button onclick="voltarMenu()">Voltar</button>
       </div>
     </section>
 
@@ -102,7 +100,6 @@
     <section id="limpeza" class="screen">
       <div class="card">
         <h2>Limpeza e Utilização</h2>
-
         <a href="https://www.youtube.com/watch?v=GdR_g1C6QRQ" target="_blank">
           Linha Europa
         </a>
@@ -111,7 +108,7 @@
           Linha América
         </a>
         <br><br>
-        <button onclick="voltar()">Voltar</button>
+        <button onclick="voltarMenu()">Voltar</button>
       </div>
     </section>
 
@@ -119,7 +116,6 @@
     <section id="manutencao" class="screen">
       <div class="card">
         <h2>Manutenção</h2>
-
         <a href="https://www.youtube.com/watch?v=vzmtNESyezE" target="_blank">
           Linha Europa
         </a>
@@ -128,14 +124,14 @@
           Linha América
         </a>
         <br><br>
-        <button onclick="voltar()">Voltar</button>
+        <button onclick="voltarMenu()">Voltar</button>
       </div>
     </section>
 
   </main>
 
   <!-- JS -->
-  <script src="app.js"></script>
+  <script src="app.js?v=10"></script>
 
 </body>
 </html>
